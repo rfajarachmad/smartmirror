@@ -1,0 +1,40 @@
+<div class="wandt">
+
+  <div class="flex-container space-between">
+
+    <div class="item animated fadeInLeft datetime">
+      <span class="date">Wednesday, 16 August 2017</span>
+      <br>
+      <h3 class="time">14:20</h3>
+    </div>
+
+    <div class="item animated fadeInDown weather">
+      <h3><i class="wi wi-thunderstorm"></i> 25&deg;C</h3>
+      <span class="name">Thunderstorm</span>
+      <br>
+      <span class="location"><i class="fa fa-map-marker"></i> Bekasi</span>
+      <ul class="forecast">
+        <li>8:00 <i class="wi wi-thunderstorm"></i></li>
+        <li>9:00 <i class="wi wi-rain"></i></li>
+        <li>10:00 <i class="wi wi-showers"></i></li>
+        <li>11:00 <i class="wi wi-cloudy"></i></li>
+        <li>Thursday <i class="wi wi-day-cloudy"></i></li>
+      </ul>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  document.addEventListener("keydown", keyDownTextField, false);
+
+  function keyDownTextField(e) {
+    var keyCode = e.keyCode;
+    if (keyCode == 13) {
+      window.location.replace('/stats');
+    } else {
+    }
+  }
+
+</script>

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+body {
+  padding: 50px;
+  font: 14px 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.bg-black {
+  background: #000;
+  color: #fff;
+}
+
+h1 {
+  font-size: 8em;
+  text-align: center;
+}
+
+.emotions i.fa {
+  font-size: 14em;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-container.space-between {
+  justify-content: space-between;
+}
+
+.flex-container .item.one-forth {
+  padding: 3em;
+  /* flex: 1 1 25%; */
+}
+
+.chart-container {
+  text-align: left;
+}
+
+.chart-container h3 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.chart-container .item {
+  display: inline-block;
+  width: 200px;
+  padding: 20px;
+}
+
+.spacer {
+  min-height: 60px;
+}
+
+.mt50 {
+  margin-top: 50px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4em;
+}
+
+.wandt .datetime .date {
+  font-size: 2em;
+}
+
+.wandt .datetime .time {
+  font-size: 4em;
+}
+
+.wandt .weather {
+  text-align: right;
+}
+
+.wandt .weather h3 {
+  font-size: 6em;
+}
+
+.wandt .weather .name {
+  font-size: 3em;
+}
+
+.wandt .weather .location {
+  font-size: 1.5em;
+}
+
+.wandt .weather ul {
+  list-style: none;
+  margin-top: 50px;
+}
+
+.wandt .weather .forecast {
+  font-size: 2em;
+}
+
+.wandt .weather .forecast i.wi {
+  display: inline-block;
+  width: 50px;
+}
+
+.chart-container {
+  opacity: 1;
+}
+
+.announcements h2 {
+  font-size: 4em;
+  margin-bottom: 50px;
+}
+
+.announcements ul {
+  /* list-style-type: none; */
+  font-size: 1.5em;
+  /* padding: 0;
+  margin: 0; */
+}
+
+.announcements .b-day p {
+  font-size: 2em;
+}
+
+.announcements .news {
+  width: 600px;
+}
+
+.announcements .news ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.announcements .news ul>li {
+  margin-bottom: 30px;
+}
+
+.announcements .news ul>li h4 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.announcements .news ul>li p {
+  font-size: 0.8em;
+}

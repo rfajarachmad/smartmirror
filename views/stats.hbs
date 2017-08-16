@@ -1,0 +1,313 @@
+<div class="flex-container space-between">
+  <div class="item">
+    <h2>Staff Happiness</h2>
+    <div class="chart-container">
+      <div class="item">
+        <h3>Happy</h3>
+        <div id="canvas-holder">
+          <canvas id="chart-area1" />
+        </div>
+      </div>
+      <div class="item">
+        <h3>Content</h3>
+        <div id="canvas-holder">
+          <canvas id="chart-area2" />
+        </div>
+      </div>
+      <div class="item">
+        <h3>Not Happy</h3>
+        <div id="canvas-holder">
+          <canvas id="chart-area3" />
+        </div>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <h2>Resource Allocations</h2>
+    <div id="container" style="width: 600px;">
+      <canvas id="canvas99"></canvas>
+    </div>
+  </div>
+
+  <div class="item announcements animated fadeInRight">
+    <h2>Announcements</h2>
+    <div class="b-day">
+      <p><i class="fa fa-birthday-cake"></i> Birthdays</p>
+      <ul>
+        <li>Budi, 16 August 2017</li>
+        <li>Anto, 20 August 2017</li>
+        <li>Charlie, 25 August 2017</li>
+      </ul>
+    </div>
+    <div class="spacer"></div>
+    <div class="news">
+      <ul>
+        <li>
+          <h4>An me, inquam, nisi te audire vellem, censes haec dicturum fuisse</h4>
+          <p>Et non ex maxima parte de tota iudicabis? Bestiarum vero nullum iudicium puto. Quae in controversiam veniunt, de iis, si placet, disseramus. Nunc omni virtuti vitium contrario nomine opponitur.</p>
+        </li>
+        <li>
+          <h4>An me, inquam, nisi te audire vellem, censes haec dicturum fuisse</h4>
+          <p>Et non ex maxima parte de tota iudicabis? Bestiarum vero nullum iudicium puto. Quae in controversiam veniunt, de iis, si placet, disseramus. Nunc omni virtuti vitium contrario nomine opponitur.</p>
+        </li>
+        <li>
+          <h4>An me, inquam, nisi te audire vellem, censes haec dicturum fuisse</h4>
+          <p>Et non ex maxima parte de tota iudicabis? Bestiarum vero nullum iudicium puto. Quae in controversiam veniunt, de iis, si placet, disseramus. Nunc omni virtuti vitium contrario nomine opponitur.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  var config1 = {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        data: [
+          50,
+          50,
+        ],
+        backgroundColor: [
+          'rgba(255, 255, 255, 1)',
+        ],
+        label: 'Dataset 1',
+        borderWidth: 0
+      }],
+      labels: [
+        'Happy',
+        ''
+      ]
+    },
+    options: {
+      cutoutPercentage: 90,
+      responsive: true,
+      legend: {
+        labels: {
+          fontColor: 'white',
+          fontSize: 22,
+        },
+        display: false,
+        onClick: function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      },
+      animation: {
+        onComplete: addText1,
+        onProgress: addText1,
+      }
+    }
+  };
+
+  var config2 = {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        data: [
+          20,
+          80,
+        ],
+        backgroundColor: [
+          'rgba(255, 255, 255, 1)',
+        ],
+        label: 'Dataset 1',
+        borderWidth: 0
+      }],
+      labels: [
+        'Not Happy',
+        ''
+      ]
+    },
+    options: {
+      cutoutPercentage: 90,
+      responsive: true,
+      legend: {
+        labels: {
+          fontColor: 'white',
+          fontSize: 22,
+        },
+        display: false,
+        onClick: function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      },
+      animation: {
+        onComplete: addText2,
+        onProgress: addText2,
+      }
+    }
+  };
+
+  var config3 = {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        data: [
+          30,
+          70,
+        ],
+        backgroundColor: [
+          'rgba(255, 255, 255, 1)',
+        ],
+        label: 'Dataset 1',
+        borderWidth: 0
+      }],
+      labels: [
+        'Content',
+        ''
+      ]
+    },
+    options: {
+      cutoutPercentage: 90,
+      responsive: true,
+      legend: {
+        labels: {
+          fontColor: 'white',
+          fontSize: 22,
+        },
+        display: false,
+        onClick: function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      },
+      animation: {
+        onComplete: addText3,
+        onProgress: addText3,
+      }
+    }
+  };
+
+  var barChartData = {
+    labels: ['JP', 'PG', 'AP', 'AN'],
+    datasets: [{
+      label: 'Dataset 1',
+      backgroundColor: 'rgba(255, 255, 255, 1)',
+      data: [
+        83,
+        155,
+        31,
+        18
+      ]
+    }, {
+      label: 'Dataset 2',
+      backgroundColor: 'rgba(255, 255, 255, 1)',
+      data: [
+        60,
+        123,
+        15,
+        18
+      ]
+    }]
+  };
+
+  window.onload = function () {
+    var canvas1 = document.getElementById('chart-area1');
+    var ctx1 = canvas1.getContext('2d');
+    window.myPie1 = new Chart(ctx1, config1);
+
+    var canvas2 = document.getElementById('chart-area2');
+    var ctx2 = canvas2.getContext('2d');
+    window.myPie2 = new Chart(ctx2, config2);
+
+    var canvas3 = document.getElementById('chart-area3');
+    var ctx3 = canvas3.getContext('2d');
+    window.myPie3 = new Chart(ctx3, config3);
+
+    var ctx = document.getElementById("canvas99").getContext("2d");
+    window.myBar = new Chart(ctx, {
+      type: 'horizontalBar',
+      data: barChartData,
+      options: {
+        responsive: true,
+        legend: {
+          display: false,
+        },
+        title: {
+          display: false,
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              fontColor: "white",
+              fontSize: 20,
+              beginAtZero: true
+            }
+          }],
+          xAxes: [{
+            ticks: {
+              fontColor: "white",
+              fontSize: 20,
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  };
+
+  function addText1() {
+    var canvas = document.getElementById('chart-area1');
+    var ctx = canvas.getContext('2d');
+    // calculate the center of the canvas (cx,cy)
+    var cx = canvas.width / 2;
+    var cy = canvas.height / 2;
+    // horizontally align text around the specified point (cx)
+    ctx.textAlign = 'center';
+    // vertically align text around the specified point (cy)
+    ctx.textBaseline = 'middle';
+    // draw the text
+    ctx.font = '40px verdana';
+    ctx.fillStyle = 'white';
+    ctx.fillText('50%', cx, cy);
+  }
+
+  function addText2() {
+    var canvas = document.getElementById('chart-area2');
+    var ctx = canvas.getContext('2d');
+    // calculate the center of the canvas (cx,cy)
+    var cx = canvas.width / 2;
+    var cy = canvas.height / 2;
+    // horizontally align text around the specified point (cx)
+    ctx.textAlign = 'center';
+    // vertically align text around the specified point (cy)
+    ctx.textBaseline = 'middle';
+    // draw the text
+    ctx.font = '40px verdana';
+    ctx.fillStyle = 'white';
+    ctx.fillText('20%', cx, cy);
+  }
+
+  function addText3() {
+    var canvas = document.getElementById('chart-area3');
+    var ctx = canvas.getContext('2d');
+    // calculate the center of the canvas (cx,cy)
+    var cx = canvas.width / 2;
+    var cy = canvas.height / 2;
+    // horizontally align text around the specified point (cx)
+    ctx.textAlign = 'center';
+    // vertically align text around the specified point (cy)
+    ctx.textBaseline = 'middle';
+    // draw the text
+    ctx.font = '40px verdana';
+    ctx.fillStyle = 'white';
+    ctx.fillText('30%', cx, cy);
+  }
+
+</script>
+
+<script>
+  document.addEventListener("keydown", keyDownTextField, false);
+
+  function keyDownTextField(e) {
+    var keyCode = e.keyCode;
+    if (keyCode == 13) {
+      window.location.replace('/');
+    } else {
+    }
+  }
+
+</script>
