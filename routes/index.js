@@ -14,5 +14,15 @@ router.get('/stats', function (req, res, next) {
   res.render('stats', {});
 });
 
+router.get('/ann', function (req, res, next) {
+  res.render('ann', {});
+});
+
+router.get('/voteus', function (req, res, next) {
+  res.render('voteus', {});
+});
+
+
+
 
 module.exports = router;

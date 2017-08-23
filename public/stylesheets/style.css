@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
 body {
-  padding: 50px;
+  padding: 100px 500px;
   font: 14px 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
@@ -14,7 +14,7 @@ a {
 }
 
 h1 {
-  font-size: 8em;
+  font-size: 6em;
   text-align: center;
 }
 
@@ -63,7 +63,7 @@ h1 {
 
 .footer {
   position: fixed;
-  bottom: 50px;
+  bottom: 300px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 4em;
