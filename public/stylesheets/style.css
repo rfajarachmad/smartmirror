@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
 body {
-  padding: 100px 500px;
+  padding: 50px;
   font: 14px 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
@@ -11,15 +11,6 @@ a {
 .bg-black {
   background: #000;
   color: #fff;
-}
-
-h1 {
-  font-size: 6em;
-  text-align: center;
-}
-
-.emotions i.fa {
-  font-size: 14em;
 }
 
 .flex-container {
@@ -34,47 +25,41 @@ h1 {
 }
 
 .flex-container .item.one-forth {
-  padding: 3em;
+  padding: 4rem;
   /* flex: 1 1 25%; */
 }
 
-.chart-container {
-  text-align: left;
-}
-
-.chart-container h3 {
-  margin-bottom: 50px;
+h1 {
+  font-size: 2rem;
   text-align: center;
 }
 
-.chart-container .item {
-  display: inline-block;
-  width: 200px;
-  padding: 20px;
+.emotions i.fa {
+  font-size: 6rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
 }
 
 .spacer {
-  min-height: 60px;
+  min-height: 30px;
 }
 
 .mt50 {
   margin-top: 50px;
 }
 
-.footer {
-  position: fixed;
-  bottom: 300px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 4em;
-}
-
 .wandt .datetime .date {
-  font-size: 2em;
+  font-size: 3rem;
 }
 
 .wandt .datetime .time {
-  font-size: 4em;
+  font-size: 4rem;
 }
 
 .wandt .weather {
@@ -82,15 +67,15 @@ h1 {
 }
 
 .wandt .weather h3 {
-  font-size: 6em;
+  font-size: 6rem;
 }
 
 .wandt .weather .name {
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 .wandt .weather .location {
-  font-size: 1.5em;
+  font-size: 2rem;
 }
 
 .wandt .weather ul {
@@ -99,7 +84,7 @@ h1 {
 }
 
 .wandt .weather .forecast {
-  font-size: 2em;
+  font-size: 2.2rem;
 }
 
 .wandt .weather .forecast i.wi {
@@ -108,27 +93,26 @@ h1 {
 }
 
 .chart-container {
+  text-align: left;
+}
+
+.chart-container h3 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.chart-container .item {
+  display: inline-block;
+  width: 120px;
+  padding: 20px;
+}
+
+.chart-container {
   opacity: 1;
 }
 
-.announcements h2 {
-  font-size: 4em;
-  margin-bottom: 50px;
-}
-
-.announcements ul {
-  /* list-style-type: none; */
-  font-size: 1.5em;
-  /* padding: 0;
-  margin: 0; */
-}
-
-.announcements .b-day p {
-  font-size: 2em;
-}
-
-.announcements .news {
-  width: 600px;
+.resource-allocations-container {
+  width: 120px;
 }
 
 .announcements .news ul {
@@ -137,15 +121,120 @@ h1 {
   margin: 0;
 }
 
-.announcements .news ul>li {
-  margin-bottom: 30px;
+@media only screen and (min-width: 1200px) {
+  body {
+    padding: 50px 100px;
+  }
+  h1 {
+    font-size: 6rem;
+  }
+  .spacer {
+    min-height: 20px;
+  }
+  h2 {
+    font-size: 2.6rem;
+    margin-top: 0;
+  }
+  h3 {
+    margin-top: 0;
+  }
+  .emotions i.fa {
+    font-size: 12rem;
+  }
+  .footer {
+    bottom: 200px;
+    font-size: 4rem;
+  }
+  .chart-container h3 {
+    margin-bottom: 20px;
+  }
+  .chart-container .item {
+    width: 160px;
+  }
+  .resource-allocations-container {
+    width: 480px;
+  }
+  .announcements h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+  .announcements ul {
+    font-size: 1.4rem;
+  }
+  .announcements .b-day p {
+    font-size: 1.6rem;
+  }
+  .announcements .news {
+    width: 600px;
+  }
+  .announcements .news ul>li {
+    margin-bottom: 20px;
+  }
+  .announcements .news ul>li h4 {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  .announcements .news ul>li p {
+    font-size: 1.4rem;
+  }
 }
 
-.announcements .news ul>li h4 {
-  font-size: 1em;
-  font-weight: bold;
-}
-
-.announcements .news ul>li p {
-  font-size: 0.8em;
+@media only screen and (min-width: 1600px) {
+  body {
+    padding: 100px 150px;
+  }
+  h1 {
+    font-size: 8rem;
+  }
+  .spacer {
+    min-height: 30px;
+  }
+  h2 {
+    font-size: 3rem;
+    margin-top: 0;
+  }
+  h3 {
+    margin-top: 0;
+  }
+  .emotions i.fa {
+    font-size: 16rem;
+  }
+  .footer {
+    bottom: 200px;
+    font-size: 6rem;
+  }
+  .chart-container h3 {
+    margin-bottom: 20px;
+  }
+  .chart-container .item {
+    width: 160px;
+  }
+  .resource-allocations-container {
+    width: 480px;
+  }
+  .announcements h2 {
+    font-size: 4.2rem;
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+  .announcements ul {
+    font-size: 2rem;
+  }
+  .announcements .b-day p {
+    font-size: 3rem;
+  }
+  .announcements .news {
+    width: 600px;
+  }
+  .announcements .news ul>li {
+    margin-bottom: 25px;
+  }
+  .announcements .news ul>li h4 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .announcements .news ul>li p {
+    font-size: 1.6rem;
+  }
 }

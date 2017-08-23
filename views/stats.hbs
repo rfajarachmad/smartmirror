@@ -25,7 +25,7 @@
     <div class="spacer"></div>
 
     <h2>Resource Allocations</h2>
-    <div id="container" style="width: 600px;">
+    <div id="container" class="resource-allocations-container">
       <canvas id="canvas99"></canvas>
     </div>
   </div>
@@ -233,7 +233,7 @@
     // vertically align text around the specified point (cy)
     ctx.textBaseline = 'middle';
     // draw the text
-    ctx.font = '40px verdana';
+    ctx.font = '2em verdana';
     ctx.fillStyle = 'white';
     ctx.fillText('50%', cx, cy);
   }
@@ -249,7 +249,7 @@
     // vertically align text around the specified point (cy)
     ctx.textBaseline = 'middle';
     // draw the text
-    ctx.font = '40px verdana';
+    ctx.font = '2em verdana';
     ctx.fillStyle = 'white';
     ctx.fillText('20%', cx, cy);
   }
@@ -265,7 +265,7 @@
     // vertically align text around the specified point (cy)
     ctx.textBaseline = 'middle';
     // draw the text
-    ctx.font = '40px verdana';
+    ctx.font = '2em verdana';
     ctx.fillStyle = 'white';
     ctx.fillText('30%', cx, cy);
   }
@@ -273,7 +273,7 @@
 </script>
 
 <script>
-    document.addEventListener('click', function () {window.location.replace('/ann');}, false);
+  document.addEventListener('click', function () { window.location.replace('/ann'); }, false);
 
   document.addEventListener("keydown", keyDownTextField, false);
 
