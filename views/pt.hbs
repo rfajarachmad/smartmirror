@@ -1,0 +1,401 @@
+<div class="animated fadeIn">
+  <h2>CMS Periodic Table</h2>
+
+  <div class="flex-container pt" id="abc">
+
+  </div>
+
+</div>
+
+<script>
+  let data = [{
+    0: null,
+    1: null,
+    2: null,
+    3: null,
+    4: null,
+    5: null,
+    6: null,
+    7: null,
+    8: null,
+    9: null,
+    10: null,
+    11: null,
+    12: null,
+    13: null,
+    14: null,
+    15: null,
+    16: null,
+    17: {
+      Text: 'CO',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    18: {
+      Text: 'O',
+      Value: Math.ceil(Math.random() * 20)
+    }
+  },
+  {
+    0: {
+      Text: 'Ms',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    1: null,
+    2: null,
+    3: null,
+    4: null,
+    5: null,
+    6: null,
+    7: null,
+    8: null,
+    9: null,
+    10: null,
+    11: null,
+    12: null,
+    13: {
+      Text: 'Em',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    14: {
+      Text: 'Re',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    15: {
+      Text: 'An',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    16: {
+      Text: 'De',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    17: {
+      Text: 'Pe',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    18: {
+      Text: 'Ss',
+      Value: Math.ceil(Math.random() * 20)
+    }
+  },
+  {
+    0: {
+      Text: 'My',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    1: {
+      Text: 'Hi',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    2: {
+      Text: 'AR',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    3: null,
+    4: null,
+    5: null,
+    6: null,
+    7: null,
+    8: null,
+    9: null,
+    10: null,
+    11: null,
+    12: null,
+    13: {
+      Text: 'Ba',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    14: {
+      Text: 'A1',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    15: {
+      Text: 'Bh',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    16: {
+      Text: 'Gv',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    17: {
+      Text: 'P5',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    18: {
+      Text: 'X',
+      Value: Math.ceil(Math.random() * 20)
+    }
+  },
+  {
+    0: {
+      Text: 'Po',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    1: {
+      Text: 'nH',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    2: {
+      Text: 'SA',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    3: {
+      Text: 'JV',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    4: {
+      Text: 'Pr',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    5: {
+      Text: 'Sp',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    6: {
+      Text: 'Bm',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    7: {
+      Text: 'AW',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    8: {
+      Text: 'Az',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    9: {
+      Text: 'CU',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    10: {
+      Text: 'I',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    11: {
+      Text: 'J2',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    12: {
+      Text: 'A3',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    13: {
+      Text: 'W',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    14: {
+      Text: 'A2',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    15: {
+      Text: 'Bc',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    16: {
+      Text: 'IO',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    17: {
+      Text: 'P7',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    18: {
+      Text: 'J6',
+      Value: Math.ceil(Math.random() * 20)
+    }
+  },
+  {
+    0: {
+      Text: 'Nq',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    1: {
+      Text: 'GG',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    2: {
+      Text: 'Li',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    3: {
+      Text: 'Nj',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    4: {
+      Text: 'Pv',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    5: {
+      Text: 'Bo',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    6: {
+      Text: 'Je',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    7: {
+      Text: 'Pu',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    8: {
+      Text: 'Ja',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    9: {
+      Text: 'Ct',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    10: {
+      Text: 'Sy',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    11: {
+      Text: 'Ca',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    12: {
+      Text: 'Fl',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    13: {
+      Text: 'Sf',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    14: {
+      Text: 'JQ',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    15: {
+      Text: 'VS',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    16: {
+      Text: 'Js',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    17: {
+      Text: 'Rb',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    18: null
+  },
+  {
+    0: null,
+    1: {
+      Text: 'Da',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    2: null,
+    3: null,
+    4: null,
+    5: {
+      Text: 'SL',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    6: {
+      Text: 'Tf',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    7: {
+      Text: 'St',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    8: {
+      Text: 'Vo',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    9: {
+      Text: 'Jm',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    10: null,
+    11: {
+      Text: 'PP',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    12: {
+      Text: 'Dj',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    13: {
+      Text: 'Sh',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    14: {
+      Text: 'GW',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    15: {
+      Text: 'C++',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    16: {
+      Text: 'Un',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    17: {
+      Text: 'Sc',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    18: null
+  },
+  {
+    0: null,
+    1: null,
+    2: null,
+    3: null,
+    4: null,
+    5: null,
+    6: {
+      Text: 'Cm',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    7: null,
+    8: null,
+    9: null,
+    10: null,
+    11: null,
+    12: null,
+    13: null,
+    14: null,
+    15: {
+      Text: 'Kn',
+      Value: Math.ceil(Math.random() * 20)
+    },
+    16: null,
+    17: null,
+    18: null
+  }];
+
+  $(function () {
+    for (var i = 0; i < data.length; i++) {
+      for (var j = 0; j < 19; j++) {
+        var d = data[i][j];
+        console.log(i, j, data[i][j]);
+        if (d) {
+          var template = '<div class="item"><span class="title">' + d.Text + '</span><span class="value">' + d.Value + '</span></div>';
+          $('#abc').append(template);
+        } else {
+          var template2 = '<div class="item black"><span class="title">XYZ</span><span class="value">99</span></div>';
+          $('#abc').append(template2);
+        }
+      }
+    }
+  });
+
+</script>
+
+
+<script>
+  document.addEventListener('click', function () { window.location.replace('/pl'); }, false);
+
+  document.addEventListener("keydown", keyDownTextField, false);
+
+  function keyDownTextField(e) {
+    var keyCode = e.keyCode;
+    if (keyCode == 13) {
+      window.location.replace('/pl');
+    } else {
+    }
+  }
+
+</script>

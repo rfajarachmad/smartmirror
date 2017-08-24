@@ -1,0 +1,227 @@
+<h2>Resources</h2>
+<div class="spacer"></div>
+<div class="flex-container ra" id="container">
+  <div class="item">
+    <h3>Software Engineers</h3>
+    <canvas id="canvas99"></canvas>
+  </div>
+  <div class="item">
+    <h3>Consultants</h3>
+    <canvas id="canvas97"></canvas>
+  </div>
+  <div class="item">
+    <h3>ITS</h3>
+    <canvas id="canvas98"></canvas>
+  </div>
+</div>
+
+<div class="spacer"></div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+
+<div class="rtotal">
+  <div class="flex-container">
+    <div class="item">
+      <strong>Software Engineers</strong>
+      <br>
+      <span class="fa-stack fa-3x">
+        <i class="fa fa-square fa-stack-2x"></i>
+        <i class="fa fa-users fa-stack-1x" style="color: #000"></i>
+      </span>
+      <span class="value">123</span>
+    </div>
+    <div class="item">
+      <strong>Consultants</strong>
+      <br>
+      <span class="fa-stack fa-3x">
+        <i class="fa fa-square fa-stack-2x"></i>
+        <i class="fa fa-briefcase fa-stack-1x" style="color: #000"></i>
+      </span>
+      <span class="value">41</span>
+    </div>
+    <div class="item">
+      <strong>ITS</strong>
+      <br>
+      <span class="fa-stack fa-3x">
+        <i class="fa fa-square fa-stack-2x"></i>
+        <i class="fa fa-server fa-stack-1x" style="color: #000"></i>
+      </span>
+      <span class="value">12</span>
+    </div>
+    <div class="item">
+      <strong>Admin &amp; Support</strong>
+      <br>
+      <span class="fa-stack fa-3x">
+        <i class="fa fa-square fa-stack-2x"></i>
+        <i class="fa fa-building fa-stack-1x" style="color: #000"></i>
+      </span>
+      <span class="value">25</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  var barChartData = {
+    labels: ['JP', 'PG', 'AP', 'AN'],
+    datasets: [{
+      label: 'Paid Project',
+      backgroundColor: 'rgba(255, 255, 255, 1)',
+      data: [
+        83,
+        155,
+        31,
+        18
+      ]
+    }, {
+      label: 'Internal Project',
+      backgroundColor: 'rgba(255, 255, 255, 0.6)',
+      data: [
+        60,
+        123,
+        15,
+        18
+      ]
+    }]
+  };
+
+  var barChartData2 = {
+    labels: ['JC', 'C', 'SC', 'LC'],
+    datasets: [{
+      label: '',
+      backgroundColor: 'rgba(255, 255, 255, 1)',
+      data: [
+        12,
+        32,
+        6,
+        14
+      ]
+    }]
+  };
+
+  var barChartData3 = {
+    labels: ['IT1', 'IT2', 'IT3', 'IT4'],
+    datasets: [{
+      label: '',
+      backgroundColor: 'rgba(255, 255, 255, 1)',
+      data: [
+        10,
+        6,
+        4,
+        3
+      ]
+    }]
+  };
+
+  window.onload = function () {
+    var ctx = document.getElementById("canvas99").getContext("2d");
+    window.myBar = new Chart(ctx, {
+      type: 'horizontalBar',
+      data: barChartData,
+      options: {
+        responsive: true,
+        legend: {
+          display: true,
+        },
+        title: {
+          display: false,
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              fontColor: "white",
+              fontSize: 14,
+              beginAtZero: true
+            }
+          }],
+          xAxes: [{
+            ticks: {
+              fontColor: "white",
+              fontSize: 14,
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+
+    var ctx2 = document.getElementById("canvas97").getContext("2d");
+    window.myBar2 = new Chart(ctx2, {
+      type: 'horizontalBar',
+      data: barChartData2,
+      options: {
+        responsive: true,
+        legend: {
+          display: false,
+        },
+        title: {
+          display: false,
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              fontColor: "white",
+              fontSize: 14,
+              beginAtZero: true
+            }
+          }],
+          xAxes: [{
+            ticks: {
+              fontColor: "white",
+              fontSize: 14,
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+
+    var ctx3 = document.getElementById("canvas98").getContext("2d");
+    window.myBar3 = new Chart(ctx3, {
+      type: 'horizontalBar',
+      data: barChartData3,
+      options: {
+        responsive: true,
+        legend: {
+          display: false,
+        },
+        title: {
+          display: false,
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              fontColor: "white",
+              fontSize: 14,
+              beginAtZero: true
+            }
+          }],
+          xAxes: [{
+            ticks: {
+              fontColor: "white",
+              fontSize: 14,
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  };
+
+</script>
+
+
+<script>
+  document.addEventListener('click', function () { window.location.replace('/pt'); }, false);
+
+  document.addEventListener("keydown", keyDownTextField, false);
+
+  function keyDownTextField(e) {
+    var keyCode = e.keyCode;
+    if (keyCode == 13) {
+      window.location.replace('/pt');
+    } else {
+    }
+  }
+
+</script>

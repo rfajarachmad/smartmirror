@@ -1,0 +1,33 @@
+<h1 class="animated fadeInUp">Hi. how are you today?</h1>
+
+<div class="spacer"></div>
+
+<div class="flex-container emotions">
+  <div class="item one-forth animated fadeInLeft">
+    <i class="fa fa-smile-o"></i>
+  </div>
+  <div class="item one-forth animated zoomIn">
+    <i class="fa fa-meh-o"></i>
+  </div>
+  <div class="item one-forth animated fadeInRight">
+    <i class="fa fa-frown-o"></i>
+  </div>
+</div>
+
+<div class="footer animated fadeIn">
+  <span>&quot;Think TWICE, Code ONCE&quot;</span>
+</div>
+
+<script>
+  document.addEventListener('click', function () { window.location.replace('/'); }, false);
+  document.addEventListener("keydown", keyDownTextField, false);
+
+  function keyDownTextField(e) {
+    var keyCode = e.keyCode;
+    if (keyCode == 13) {
+      window.location.replace('/');
+    } else {
+    }
+  }
+
+</script>

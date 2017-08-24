@@ -29,16 +29,26 @@
 
 
 <script>
-  document.addEventListener('click', function () { window.location.replace('/'); }, false);
+  document.addEventListener('click', function () { window.location.replace('/stats'); }, false);
 
   document.addEventListener("keydown", keyDownTextField, false);
 
   function keyDownTextField(e) {
     var keyCode = e.keyCode;
     if (keyCode == 13) {
-      window.location.replace('/');
+      window.location.replace('/stats');
     } else {
     }
   }
+
+  $(function () {
+    setInterval(function () {
+      let c = $('.news ul>li:first').clone();
+      $('.news ul>li:first').slideUp(function () {
+        $('.news ul>li:first').remove();
+      });
+      $(c).appendTo('.news ul').hide().fadeIn();
+    }, 5000);
+  });
 
 </script>

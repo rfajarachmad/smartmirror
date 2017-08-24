@@ -21,13 +21,6 @@
         </div>
       </div>
     </div>
-
-    <div class="spacer"></div>
-
-    <h2>Resource Allocations</h2>
-    <div id="container" class="resource-allocations-container">
-      <canvas id="canvas99"></canvas>
-    </div>
   </div>
 
 
@@ -44,6 +37,7 @@
         ],
         backgroundColor: [
           'rgba(255, 255, 255, 1)',
+          'rgba(255, 255, 255, 0.4)',
         ],
         label: 'Dataset 1',
         borderWidth: 0
@@ -84,6 +78,7 @@
         ],
         backgroundColor: [
           'rgba(255, 255, 255, 1)',
+          'rgba(255, 255, 255, 0.4)',
         ],
         label: 'Dataset 1',
         borderWidth: 0
@@ -124,6 +119,7 @@
         ],
         backgroundColor: [
           'rgba(255, 255, 255, 1)',
+          'rgba(255, 255, 255, 0.4)',
         ],
         label: 'Dataset 1',
         borderWidth: 0
@@ -154,28 +150,7 @@
     }
   };
 
-  var barChartData = {
-    labels: ['JP', 'PG', 'AP', 'AN'],
-    datasets: [{
-      label: 'Dataset 1',
-      backgroundColor: 'rgba(255, 255, 255, 1)',
-      data: [
-        83,
-        155,
-        31,
-        18
-      ]
-    }, {
-      label: 'Dataset 2',
-      backgroundColor: 'rgba(255, 255, 255, 1)',
-      data: [
-        60,
-        123,
-        15,
-        18
-      ]
-    }]
-  };
+
 
   window.onload = function () {
     var canvas1 = document.getElementById('chart-area1');
@@ -189,37 +164,6 @@
     var canvas3 = document.getElementById('chart-area3');
     var ctx3 = canvas3.getContext('2d');
     window.myPie3 = new Chart(ctx3, config3);
-
-    var ctx = document.getElementById("canvas99").getContext("2d");
-    window.myBar = new Chart(ctx, {
-      type: 'horizontalBar',
-      data: barChartData,
-      options: {
-        responsive: true,
-        legend: {
-          display: false,
-        },
-        title: {
-          display: false,
-        },
-        scales: {
-          yAxes: [{
-            ticks: {
-              fontColor: "white",
-              fontSize: 20,
-              beginAtZero: true
-            }
-          }],
-          xAxes: [{
-            ticks: {
-              fontColor: "white",
-              fontSize: 20,
-              beginAtZero: true
-            }
-          }]
-        }
-      }
-    });
   };
 
   function addText1() {
@@ -273,14 +217,14 @@
 </script>
 
 <script>
-  document.addEventListener('click', function () { window.location.replace('/ann'); }, false);
+  document.addEventListener('click', function () { window.location.replace('/w_and_t'); }, false);
 
   document.addEventListener("keydown", keyDownTextField, false);
 
   function keyDownTextField(e) {
     var keyCode = e.keyCode;
     if (keyCode == 13) {
-      window.location.replace('/ann');
+      window.location.replace('/w_and_t');
     } else {
     }
   }
